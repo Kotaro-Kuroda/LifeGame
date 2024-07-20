@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Life Game</title>
+    <style>
+        canvas {
+            border: 1px solid black;
+        }
+
+        .controls {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Life Game</h1>
+    <div class="controls">
+        <button onclick="startGame()">Start</button>
+        <button onclick="stopGame()">Stop</button>
+        <button onclick="resetGame()">Reset</button>
+    </div>
+    <div class="preset">
+        Preset<select name="preset" id="preset" onchange="resetGame()">
+            <option value="random">ランダム</option>
+            <option value="glider">グライダー</option>
+        </select>
+
+    </div>
+    <canvas id="gameCanvas" width="500" height="500"></canvas>
+
+    <script src="gameoflife.js"></script>
+</body>
+
+</html>
